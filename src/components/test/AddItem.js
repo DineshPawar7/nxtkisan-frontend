@@ -8,7 +8,7 @@ function AddItem() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5000/items", { name }).then(() => {
+        axios.post("https://nxtkisan-backend.onrender.com/items", { name }).then(() => {
             navigate("/");
         });
     };

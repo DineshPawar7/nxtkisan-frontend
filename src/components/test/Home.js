@@ -5,13 +5,13 @@ function Home() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/items").then((response) => {
+        axios.get("https://nxtkisan-backend.onrender.com/items").then((response) => {
             setItems(response.data);
         });
     }, []);
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/items/${id}`).then(() => {
+        axios.delete(`https://nxtkisan-backend.onrender.com/items/${id}`).then(() => {
             setItems(items.filter((item) => item.id !== id));
         });
     };
